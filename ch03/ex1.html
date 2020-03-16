@@ -1,0 +1,33 @@
+<!--ex1.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check() {
+            alert("보이나요?");
+            //자바스크립트에서 document는 html에서 body부분
+            f = document.frm; 
+            if(f.id.value==""){
+                alert("아이디를 입력하세요.");
+                return;
+            }
+        }
+    </script>
+</head>
+<body>
+  <h3>로그인 폼</h3>
+  <form name="frm" method ="" action="">      
+      <!--method 두가지있어요. 1.default는 get 방식 : 가져오는거(검색, 글읽기)/ 2.post 방식 : 넣는거(글쓰기,수정)-->
+      <!--action 서버안에 어디에서 요청하고 응답받아올지 적어서 연결한다.-->
+      
+      ID : <input type="text" size="15" name="id" value=""><br>
+      PWD : <input type="password" size="15" name="pwdword" value=""><br>
+      <input type="submit" value="로그인" onclick="check()">
+      <!--input태그 속성type default 값은 text입니다. 그래서 생략가능-->
+      <!--input태그 속성 name은 반드시 value는 선택//왜 반드시 name을 하냐면 한페이지에 여러가지 폼이 있기때문에 구분하기위해서-->
+  </form>  
+</body>
+</html>

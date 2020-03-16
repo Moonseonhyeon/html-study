@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>회원정보</h2>
+    <form action="member.jsp">
+        <label>이름 : <input name="name" placeholder="이름 입력" required></label><br>
+        <label>아이디 : <input name="id" placeholder="아이디 입력"></label> <input type="button" value="중복확인" required><br>
+        <label>비밀번호 : <input type="password" name="pwd" placeholder="비밀번호 입력" required></label><br>
+        <label>비밀번호 확인 : <input type="password" name="repwd" placeholder="비밀번호 확인" required></label><br>
+        <label>이메일 : <input type="email" name="email" placeholder="Ex)ds10123@naver.com" required></label><br>
+        <label>이메일 수신동의 : <input type="radio" name="1" required> 동의 <input type="radio" name="2"> 비동의</label> <br>
+        <label>전화번호 : 
+        <select id="통신사" name="phone"required>
+            <option value="SKT">SKT</option>
+            <option value="KT">KT</option>
+            <option value="LG">LG</option>
+        </select></label>
+          <input type="tel" name="num" placeholder="-뺴고 숫자만 입력" required><br>
+          <label>정보이용 <input type="checkbox" name="a" required>개인정보이용 <input type="checkbox" name="b">개인정보사용</label><br>
+        <input type="submit" name="register" value="가입" onclick="check()">
+        
+      <!--required은 클라이언트가 반드시 입력해야하는 태그에 속성! / <label>태그 안에 -->
+    </form> 
+</body>
+</html>

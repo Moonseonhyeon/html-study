@@ -1,0 +1,43 @@
+<!--자바스크립트는 기본적으로 브라우저 기본 언어로 쓰고 있어요.
+브라우저를 제어하는 기능을 가지고있음. 
+서버 일을 줄여주는 자바스크립트!
+클라이언트에서 전송됩니다.
+head태그, body태그 안에 사용가능 외부 파일확장자 .js로 연결해서 사용가능
+오직 자바스크립트로 마우스, 키보드입력 가능-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--2.-->
+    <script>
+        function over(obj){
+            obj.src="media/banana.png";
+        }
+        function out(obj){
+            obj.src="media/apple.png";
+        }
+    </script>
+
+    <script src="ex1.js"></script> <!--3.-->
+</head>
+<body>
+    <h3>자바스크립트 동작 위치</h3>
+    <!--this : 내자신을 가르치는 예약어-->
+    <!--onmouse 는 이벤트-->
+
+    <!--1.-->
+    <img src="media/apple.png"
+         onmouseover="this.src='media/banana.png'"
+         onmouseout="this.src='media/apple.png'"><hr>
+    <!--2.-->
+    <img src="media/apple.png"
+        onmouseover="over(this)"
+        onmouseout="out(this)"><hr>
+    <!--3.-->
+    <img src="media/apple.png"
+        onmouseover="over2(this)"
+        onmouseout="out2(this)">
+        
+</body>
+</html>
