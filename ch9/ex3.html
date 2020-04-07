@@ -6,14 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="p">마우스를 올려보세요</p>
+    <p id="p">마우스를 올려 보세요</p>
     <button onclick="f(event)">클릭하세요</button><!--이벤트 리스너-->
     <script>
         function f(e){
             alert(e.type);
         }
         //p태그에 마우스가 over될 때 f함수 등록
-        document.getElementById("p"),onmouseover = f;
+        document.getElementById("p").onmouseover = f;
     </script>
 </body>
 </html>
+

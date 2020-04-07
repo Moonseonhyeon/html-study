@@ -9,10 +9,10 @@
             sel = document.getElementById("sel");
             img = document.getElementById("myImg");
             img.onload = function(){ //서버로 부터 이미지가 로딩 될 때
-                mySpan = document.getElementById("mySpan");
-                mySpan.innerHTML = img.width + "x" + img.height;
+                myspan = document.getElementById("mySpan");
+                myspan.innerHTML = img.width + "x" + img.height;
             }
-            index = sel.selectedindex;
+            index = sel.selectedIndex;
            // alert(index);
            img.src = sel.options[index].value;
         }
